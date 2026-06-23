@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Variables and Their Meaning &#8212; IPMAI Cycle Monitor Framework  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=f6a572b4" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Fault and Artifact Regimes" href="fault_regimes.html" />
+    <link rel="prev" title="PID Control Loop" href="pid_control_loop.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IPMAI Cycle Monitor Framework</a></h1>
+
+
+
+<p class="blurb">Explainable cycle monitoring using PID simulation, LNU weights, Learning Entropy and saliency maps</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complete_pipeline.html">Complete Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator_principle.html">Simulator Principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pid_control_loop.html">PID Control Loop</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variables and Their Meaning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#time-variables">Time variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-and-control-variables">Reference and control variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disturbance-and-artifact-variables">Disturbance and artifact variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotation-variables">Annotation variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#practical-note">Practical note</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fault_regimes.html">Fault and Artifact Regimes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibration_features.html">Vibration Synthesis and Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_data_structure.html">Generated Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Visualization Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practical_interpretation.html">Practical Industrial Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_reference.html">Setup Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring and Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pid_control_loop.html" title="previous chapter">PID Control Loop</a></li>
+      <li>Next: <a href="fault_regimes.html" title="next chapter">Fault and Artifact Regimes</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="variables-and-their-meaning">
+<h1>Variables and Their Meaning<a class="headerlink" href="#variables-and-their-meaning" title="Link to this heading">¶</a></h1>
+<p>This page lists the main variables stored in the generated CSV files.</p>
+<section id="time-variables">
+<h2>Time variables<a class="headerlink" href="#time-variables" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">t</span></code></dt><dd><p>Time in seconds at the control-loop sampling rate.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">k</span></code></dt><dd><p>Discrete sample index. It may not be explicitly stored in every file, but it is implied by the row number.</p>
+</dd>
+</dl>
+</section>
+<section id="reference-and-control-variables">
+<h2>Reference and control variables<a class="headerlink" href="#reference-and-control-variables" title="Link to this heading">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">theta_ref</span></code></dt><dd><p>Desired position or setpoint. This is the reference signal that the PID loop should follow.</p>
+<p>In the LNU analysis this is used as:</p>
+<div class="math notranslate nohighlight">
+\[d(k)=\theta_{ref}(k).\]</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">theta</span></code></dt><dd><p>Simulated controlled position. This is the main controlled output of the system.</p>
+<p>In the LNU analysis this is used as:</p>
+<div class="math notranslate nohighlight">
+\[y(k)=\theta(k).\]</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">omega</span></code></dt><dd><p>Angular velocity. It is the derivative-like state of the mechanical plant.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">u</span></code></dt><dd><p>PID control command. In an industrial interpretation this may correspond to actuator command, motor torque command, or current-like control variable.</p>
+<p>In the LNU analysis this is used as:</p>
+<div class="math notranslate nohighlight">
+\[u(k).\]</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">e</span></code></dt><dd><p>Control-loop regulation deviation stored by the simulator. In the documentation notation it is written with the subscript <span class="math notranslate nohighlight">\(e_c(k)\)</span> to distinguish it from the LNU model residual:</p>
+<div class="math notranslate nohighlight">
+\[e_c(k)=d(k)-y(k)=\theta_{ref}(k)-\theta(k).\]</div>
+</dd>
+</dl>
+</section>
+<section id="disturbance-and-artifact-variables">
+<h2>Disturbance and artifact variables<a class="headerlink" href="#disturbance-and-artifact-variables" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">tau_d</span></code></dt><dd><p>Disturbance torque injected into the mechanical plant. It directly affects the mechanical equation of motion.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">hf_rms</span></code></dt><dd><p>High-frequency envelope RMS extracted from the simulated vibration segment. It represents broad high-frequency vibration activity.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">a2x</span></code></dt><dd><p>Amplitude of the second-order rotational component. It is computed from the simulated vibration segment using a single-frequency amplitude estimate.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">amesh</span></code></dt><dd><p>Gear-mesh-like amplitude component. It approximates a high-order vibration component related to repeated mechanical contact or meshing.</p>
+</dd>
+</dl>
+</section>
+<section id="annotation-variables">
+<h2>Annotation variables<a class="headerlink" href="#annotation-variables" title="Link to this heading">¶</a></h2>
+<p>These are stored in the annotated CSV file.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">fault_id</span></code></dt><dd><p>Numerical identifier of the operating regime.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">fault_name</span></code></dt><dd><p>Human-readable name of the regime.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">fault_active</span></code></dt><dd><p>Binary indicator. In the current constant-regime dataset it is usually 0 for healthy and 1 for fault regimes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">fault_magnitude</span></code></dt><dd><p>Scaling factor of the fault intensity.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">trial_id</span></code></dt><dd><p>Repetition number.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">run_id</span></code></dt><dd><p>Identifier of the generated run/session.</p>
+</dd>
+</dl>
+</section>
+<section id="practical-note">
+<h2>Practical note<a class="headerlink" href="#practical-note" title="Link to this heading">¶</a></h2>
+<p>The unannotated <code class="docutils literal notranslate"><span class="pre">measured.csv</span></code> should resemble what may be available in practice: measured variables without explicit fault labels. The <code class="docutils literal notranslate"><span class="pre">annotated.csv</span></code> file is intended for training, validation and simulation studies.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/variables.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

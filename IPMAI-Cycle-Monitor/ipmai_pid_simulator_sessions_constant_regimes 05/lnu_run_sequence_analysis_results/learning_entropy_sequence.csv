@@ -1,0 +1,11 @@
+seq_index,segment_label,run_name,fault_id,fault_name,LE_from_previous_segment,LE_from_previous_segment_norm
+0,000_sim_healthy_001,sim_healthy_001,0,healthy,0.0,0.0
+1,001_sim_ripple_001,sim_ripple_001,1,orig_ripple,8.014244456033731,0.4294643279349283
+2,002_sim_healthy_001,sim_healthy_001,0,healthy,8.014244456029745,0.4294643279347147
+3,003_sim_ripple_002,sim_ripple_002,1,orig_ripple,18.661024757445297,0.9999999999999465
+4,004_sim_healthy_001,sim_healthy_001,0,healthy,18.661024757443382,0.9999999999998439
+5,005_sim_low_order_001,sim_low_order_001,2,low_order,5.768552971930843,0.309123054436173
+6,006_sim_healthy_001,sim_healthy_001,0,healthy,5.768552971928647,0.3091230544360553
+7,007_sim_mesh_ampmod_001,sim_mesh_ampmod_001,3,mesh_ampmod,6.888806599913663,0.369154785948442
+8,008_sim_healthy_001,sim_healthy_001,0,healthy,6.888806599914171,0.3691547859484692
+9,009_sim_impacts_res_001,sim_impacts_res_001,4,impacts_res,0.02483689313685013,0.001330950119818017

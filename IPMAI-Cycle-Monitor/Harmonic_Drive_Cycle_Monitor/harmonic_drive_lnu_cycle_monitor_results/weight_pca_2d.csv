@@ -1,0 +1,3 @@
+run_name,file_name,load_g,angle_deg,c1,c2,LE_vs_reference_norm
+250922_CobotStandRawAccX _art_pert,250922_CobotStandRawAccX _art_pert.csv,,,-0.04528344423,9.308291535e-18,0
+250922_CobotStandRawAccX,250922_CobotStandRawAccX.csv,,,0.04528344423,1.203454425e-17,1

@@ -1,0 +1,2 @@
+run_id,t_start,t_end,fault_id,fault_name,fault_active,fault_magnitude,trial,seed,description
+sim_ripple_002,0,20.01,1,orig_ripple,1,2,1,11323,Constant regime for entire run; no within-run fault transitions.

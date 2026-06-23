@@ -1,0 +1,7 @@
+run_id,fault_id,fault_name,magnitude,trial
+sim_healthy_001,0,healthy,1.0,0
+sim_ripple_001,1,orig_ripple,1.0,0
+sim_ripple_002,1,orig_ripple,2.0,1
+sim_low_order_001,2,low_order,1.0,0
+sim_mesh_ampmod_001,3,mesh_ampmod,1.0,0
+sim_impacts_res_001,4,impacts_res,1.0,0

@@ -1,0 +1,13 @@
+Documentation link check after clean Sphinx rebuild
+=================================================
+
+Package checked after deleting all _build folders and rebuilding Sphinx HTML with:
+python -m sphinx -b html -E . _build/html
+
+Results:
+- PID documentation: local HTML links bad = 0
+- Harmonic Drive documentation: local HTML links bad = 0
+- Robotic Cycle documentation: local HTML links bad = 0
+
+The PID file _build/html/pca_and_weight_space.html is present and index.html links to it as a relative local file.
+If Firefox reports it as missing on Windows, the local folder is likely a stale copy or the _build/html folder was not replaced together with index.html.

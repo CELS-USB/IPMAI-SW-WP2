@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Windows Setup &#8212; Robotic Cycle Monitor  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="LNU Analysis" href="lnu_analysis.html" />
+    <link rel="prev" title="Generated Outputs" href="outputs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="windows-setup">
+<h1>Windows Setup<a class="headerlink" href="#windows-setup" title="Link to this heading">¶</a></h1>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>Recommended:</p>
+<ul class="simple">
+<li><p>Windows 11,</p></li>
+<li><p>Python 3.12,</p></li>
+<li><p>Anaconda.</p></li>
+</ul>
+</section>
+<section id="install-packages">
+<h2>Install packages<a class="headerlink" href="#install-packages" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">pandas</span> <span class="n">matplotlib</span> <span class="n">PySide6</span> <span class="n">pyqtgraph</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+</section>
+<section id="run-order">
+<h2>Run order<a class="headerlink" href="#run-order" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Raw CSV viewer:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_1_robotic_raw_csv_viewer</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>LNU continual monitoring:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_2_robotic_lnu_cycle_monitor</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>MLP training:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_3_train_mlp_from_robotic_lnu_weights</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Results viewer:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">run_4_robotic_results_viewer</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="sphinx-build">
+<h2>Sphinx build<a class="headerlink" href="#sphinx-build" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="o">.</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Robotic Cycle Monitor</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_overview.html">Pipeline Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Robotic Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Generated Outputs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-packages">Install packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-order">Run order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-build">Sphinx build</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="outputs.html" title="previous chapter">Generated Outputs</a></li>
+      <li>Next: <a href="lnu_analysis.html" title="next chapter">LNU Analysis</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/windows_setup.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

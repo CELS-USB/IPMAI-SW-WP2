@@ -1,0 +1,2 @@
+run_id,t_start,t_end,fault_id,fault_name,fault_active,fault_magnitude,trial,seed,description
+sim_impacts_res_001,0,20.01,4,impacts_res,1,1,0,40223,Constant regime for entire run; no within-run fault transitions.

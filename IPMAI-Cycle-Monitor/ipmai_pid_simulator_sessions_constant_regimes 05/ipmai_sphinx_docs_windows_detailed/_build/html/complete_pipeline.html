@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Complete Pipeline &#8212; IPMAI Cycle Monitor Framework  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=f6a572b4" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Simulator Principle" href="simulator_principle.html" />
+    <link rel="prev" title="Notation and Terminology" href="notation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IPMAI Cycle Monitor Framework</a></h1>
+
+
+
+<p class="blurb">Explainable cycle monitoring using PID simulation, LNU weights, Learning Entropy and saliency maps</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Complete Pipeline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-or-data-acquisition">1. Simulation or data acquisition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signal-visualization">2. Signal visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lnu-modeling">3. LNU modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weight-space-analysis">4. Weight-space analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mlp-classification">5. MLP classification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulator_principle.html">Simulator Principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pid_control_loop.html">PID Control Loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">Variables and Their Meaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fault_regimes.html">Fault and Artifact Regimes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibration_features.html">Vibration Synthesis and Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_data_structure.html">Generated Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Visualization Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practical_interpretation.html">Practical Industrial Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_reference.html">Setup Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring and Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="notation.html" title="previous chapter">Notation and Terminology</a></li>
+      <li>Next: <a href="simulator_principle.html" title="next chapter">Simulator Principle</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="complete-pipeline">
+<h1>Complete Pipeline<a class="headerlink" href="#complete-pipeline" title="Link to this heading">¶</a></h1>
+<p>The current pipeline consists of five main layers.</p>
+<section id="simulation-or-data-acquisition">
+<h2>1. Simulation or data acquisition<a class="headerlink" href="#simulation-or-data-acquisition" title="Link to this heading">¶</a></h2>
+<p>The simulator generates run folders. Each run represents one dominant operating regime, for example healthy operation or one type of fault.</p>
+</section>
+<section id="signal-visualization">
+<h2>2. Signal visualization<a class="headerlink" href="#signal-visualization" title="Link to this heading">¶</a></h2>
+<p>The PySide6 viewers load the run folders and display either all variables of one run or one selected variable across all operating regimes.</p>
+</section>
+<section id="lnu-modeling">
+<h2>3. LNU modeling<a class="headerlink" href="#lnu-modeling" title="Link to this heading">¶</a></h2>
+<p>For each run, an LNU model is trained. In the current first-stage approach, one complete run is treated as one batch-learning window.</p>
+</section>
+<section id="weight-space-analysis">
+<h2>4. Weight-space analysis<a class="headerlink" href="#weight-space-analysis" title="Link to this heading">¶</a></h2>
+<p>The learned LNU weights are projected to a two-dimensional PCA plane. This plane is interpreted as an empirical map of learned dynamic states.</p>
+</section>
+<section id="mlp-classification">
+<h2>5. MLP classification<a class="headerlink" href="#mlp-classification" title="Link to this heading">¶</a></h2>
+<p>A small feedforward MLP can be trained on the learned LNU weight vectors. The MLP output estimates probabilities of operating states.</p>
+<p>The full conceptual pipeline is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>measured.csv / simulated runs
+    ↓
+signal inspection
+    ↓
+healthy normalization
+    ↓
+healthy PCA basis
+    ↓
+LNU learning per run
+    ↓
+learned weights
+    ↓
+weight-space PCA
+    ↓
+Learning Entropy and saliency
+    ↓
+optional MLP classifier
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/complete_pipeline.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

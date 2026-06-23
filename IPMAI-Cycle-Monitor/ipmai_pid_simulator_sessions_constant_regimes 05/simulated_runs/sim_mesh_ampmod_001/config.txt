@@ -1,0 +1,76 @@
+{
+  "run_definition": {
+    "run_id": "sim_mesh_ampmod_001",
+    "fault_id": 3,
+    "fault_name": "mesh_ampmod",
+    "magnitude": 1.0,
+    "trial": 0
+  },
+  "seed": 30223,
+  "output": {
+    "output_root": "simulated_runs",
+    "overwrite_output": true,
+    "csv_float_format": "%.10g"
+  },
+  "sampling": {
+    "T": 20.0,
+    "Ts": 0.01,
+    "fs_control": 100.0,
+    "fs_vib": 10000.0,
+    "dt_vib": 0.0001,
+    "Nv_per_control_sample": 100
+  },
+  "reference": {
+    "kind": "steps",
+    "step_levels": [
+      0.0,
+      1.0,
+      -1.0,
+      0.0
+    ],
+    "step_times": [
+      0.0,
+      4.0,
+      10.0,
+      16.0
+    ],
+    "sine_amplitude": 0.8,
+    "sine_frequency": 0.08,
+    "sine_offset": 0.0
+  },
+  "plant": {
+    "J": 0.05,
+    "B": 0.2,
+    "K": 0.0
+  },
+  "pid": {
+    "Kp": 30.0,
+    "Ki": 40.0,
+    "Kd": 1.0
+  },
+  "vibro_features": {
+    "bp_lo": 200.0,
+    "bp_hi": 2500.0,
+    "bp_numtaps": 201
+  },
+  "artefacts": {
+    "n_ripple": 80,
+    "A0": 0.2,
+    "A1": 0.5,
+    "A_order": 0.25,
+    "A_mesh": 0.18,
+    "mod_f": 12.0,
+    "impact_f": 20.0,
+    "f_res": 1600.0,
+    "alpha_res": 350.0,
+    "vib_noise_std": 0.03,
+    "base_tau_impulse": 0.1,
+    "base_vib_ring": 0.7
+  },
+  "slow_measurement_noise": {
+    "enabled": false,
+    "theta_noise_std": 0.0,
+    "omega_noise_std": 0.0,
+    "u_noise_std": 0.0
+  }
+}

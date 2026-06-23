@@ -1,0 +1,19 @@
+run_name,file_name,load_g,angle_deg,reference_name,is_reference_file,reference_policy_note,LE_vs_reference,LE_vs_reference_norm
+0000g_060d_symFE_tv1_x005,0000g_060d_symFE_tv1_x005.csv,0,60,0000g_060d_symFE_tv1_x005.csv,True,The first sorted CSV file is used as reference/baseline only because the healthy file is unknown. This is not a claim that the reference file is healthy.,0,0
+0000g_090d_symFE_tv1_x005,0000g_090d_symFE_tv1_x005.csv,0,90,0000g_060d_symFE_tv1_x005.csv,False,,9.526243119,0.8700162012
+0000g_180d_symFE_tv1_x005,0000g_180d_symFE_tv1_x005.csv,0,180,0000g_060d_symFE_tv1_x005.csv,False,,10.13945497,0.9260198364
+0200g_060d_symFE_tv1_x005,0200g_060d_symFE_tv1_x005.csv,200,60,0000g_060d_symFE_tv1_x005.csv,False,,1.210881064,0.1105877869
+0200g_090d_symFE_tv1_x005,0200g_090d_symFE_tv1_x005.csv,200,90,0000g_060d_symFE_tv1_x005.csv,False,,8.986353597,0.8207089744
+0200g_180d_symFE_tv1_x005,0200g_180d_symFE_tv1_x005.csv,200,180,0000g_060d_symFE_tv1_x005.csv,False,,8.952950144,0.8176582916
+0300g_060d_symFE_tv1_x005,0300g_060d_symFE_tv1_x005.csv,300,60,0000g_060d_symFE_tv1_x005.csv,False,,0.5232648442,0.04778892228
+0300g_090d_symFE_tv1_x005,0300g_090d_symFE_tv1_x005.csv,300,90,0000g_060d_symFE_tv1_x005.csv,False,,9.731890314,0.8887976232
+0300g_180d_symFE_tv1_x005,0300g_180d_symFE_tv1_x005.csv,300,180,0000g_060d_symFE_tv1_x005.csv,False,,9.524184026,0.8698281476
+0400g_060d_symFE_tv1_x005,0400g_060d_symFE_tv1_x005.csv,400,60,0000g_060d_symFE_tv1_x005.csv,False,,1.092063142,0.09973634039
+0400g_090d_symFE_tv1_x005,0400g_090d_symFE_tv1_x005.csv,400,90,0000g_060d_symFE_tv1_x005.csv,False,,8.796800367,0.8033973879
+0400g_180d_symFE_tv1_x005,0400g_180d_symFE_tv1_x005.csv,400,180,0000g_060d_symFE_tv1_x005.csv,False,,9.270517141,0.846661166
+0600g_060d_symFE_tv1_x005,0600g_060d_symFE_tv1_x005.csv,600,60,0000g_060d_symFE_tv1_x005.csv,False,,1.190405805,0.1087178149
+0600g_090d_symFE_tv1_x005,0600g_090d_symFE_tv1_x005.csv,600,90,0000g_060d_symFE_tv1_x005.csv,False,,9.013417818,0.8231807054
+0600g_180d_symFE_tv1_x005,0600g_180d_symFE_tv1_x005.csv,600,180,0000g_060d_symFE_tv1_x005.csv,False,,10.94950083,1
+1200g_060d_symFE_tv1_x005,1200g_060d_symFE_tv1_x005.csv,1200,60,0000g_060d_symFE_tv1_x005.csv,False,,2.081295716,0.1900813332
+1200g_090d_symFE_tv1_x005,1200g_090d_symFE_tv1_x005.csv,1200,90,0000g_060d_symFE_tv1_x005.csv,False,,6.113359623,0.5583231343
+1200g_180d_symFE_tv1_x005,1200g_180d_symFE_tv1_x005.csv,1200,180,0000g_060d_symFE_tv1_x005.csv,False,,8.826375882,0.8060984714

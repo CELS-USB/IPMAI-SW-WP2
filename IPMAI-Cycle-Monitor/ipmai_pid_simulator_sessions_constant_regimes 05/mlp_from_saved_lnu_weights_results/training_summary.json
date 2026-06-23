@@ -1,0 +1,37 @@
+{
+  "weights_csv": "lnu_run_sequence_analysis_results\\sequence_weights.csv",
+  "n_samples": 10,
+  "n_features": 11,
+  "n_classes": 5,
+  "label_column": "fault_name",
+  "classes": [
+    "healthy",
+    "impacts_res",
+    "low_order",
+    "mesh_ampmod",
+    "orig_ripple"
+  ],
+  "weight_columns": [
+    "w_0",
+    "w_1",
+    "w_2",
+    "w_3",
+    "w_4",
+    "w_5",
+    "w_6",
+    "w_7",
+    "w_8",
+    "w_9",
+    "w_10"
+  ],
+  "standardize_weights": true,
+  "hidden_layer_sizes": [
+    5
+  ],
+  "activation": "tanh",
+  "solver": "lbfgs",
+  "alpha": 0.0001,
+  "max_iter": 5000,
+  "use_train_test_split": false,
+  "training_accuracy": 1.0
+}

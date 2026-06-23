@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>LNU Monitoring &#8212; Harmonic Drive Cycle Monitor  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Learning Entropy" href="learning_entropy.html" />
+    <link rel="prev" title="PCA and Weight-Space Interpretation" href="pca_and_weight_space.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="lnu-monitoring">
+<h1>LNU Monitoring<a class="headerlink" href="#lnu-monitoring" title="Link to this heading">¶</a></h1>
+<section id="linear-neural-unit">
+<h2>Linear Neural Unit<a class="headerlink" href="#linear-neural-unit" title="Link to this heading">¶</a></h2>
+<p>The package uses a Linear Neural Unit (LNU) as a local in-parameter-linear model. For the selected delayed variables or PCA components, the input vector is denoted by <span class="math notranslate nohighlight">\(\mathbf{x}(k)\)</span> and the weight vector by <span class="math notranslate nohighlight">\(\mathbf{w}(k)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\tilde{y}(k)=\mathbf{w}^T(k)\mathbf{x}(k).\]</div>
+<p>The measured or target value is <span class="math notranslate nohighlight">\(y(k)\)</span>, and the model residual used for adaptation is</p>
+<div class="math notranslate nohighlight">
+\[e(k)=y(k)-\tilde{y}(k).\]</div>
+</section>
+<section id="interpretation-of-weights">
+<h2>Interpretation of weights<a class="headerlink" href="#interpretation-of-weights" title="Link to this heading">¶</a></h2>
+<p>The vector <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> represents the locally learned dynamic law of the observed cycle. Changes of <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> between cycles therefore indicate changes in the learned dynamics rather than merely changes in raw signal amplitude.</p>
+</section>
+<section id="continual-training">
+<h2>Continual training<a class="headerlink" href="#continual-training" title="Link to this heading">¶</a></h2>
+<p>For a run or cycle <span class="math notranslate nohighlight">\(j\)</span>, the resulting weight vector is denoted by <span class="math notranslate nohighlight">\(\mathbf{w}^{(j)}\)</span>. The next run is initialized from the previous trained vector whenever the corresponding script uses continual adaptation. This preserves the intended learning behavior of the package.</p>
+</section>
+<section id="weight-increments">
+<h2>Weight increments<a class="headerlink" href="#weight-increments" title="Link to this heading">¶</a></h2>
+<p>The basic quantity used for novelty and saliency analysis is</p>
+<div class="math notranslate nohighlight">
+\[\Delta\mathbf{w}^{(j)}=\mathbf{w}^{(j)}-\mathbf{w}^{(j-1)}.\]</div>
+<p>The magnitude and direction of <span class="math notranslate nohighlight">\(\Delta\mathbf{w}^{(j)}\)</span> are interpreted as the learning effort needed to adapt the local model to the next cycle.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Harmonic Drive Cycle Monitor</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_overview.html">Pipeline Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Harmonic Drive Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LNU Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linear-neural-unit">Linear Neural Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interpretation-of-weights">Interpretation of weights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#continual-training">Continual training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weight-increments">Weight increments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Generated Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_setup.html">Windows Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pca_and_weight_space.html" title="previous chapter">PCA and Weight-Space Interpretation</a></li>
+      <li>Next: <a href="learning_entropy.html" title="next chapter">Learning Entropy</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/lnu_monitoring.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

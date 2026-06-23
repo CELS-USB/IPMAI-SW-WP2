@@ -1,0 +1,7 @@
+run_name,prediction_csv,Q_final,RMSE_norm
+sim_healthy_001,prediction_sim_healthy_001.csv,0.5204024179069033,0.01616717066422693
+sim_ripple_001,prediction_sim_ripple_001.csv,0.5249689634091171,0.01623794941518182
+sim_ripple_002,prediction_sim_ripple_002.csv,0.5403014150992625,0.016473368842291947
+sim_low_order_001,prediction_sim_low_order_001.csv,0.5156771587127789,0.01609360425126931
+sim_mesh_ampmod_001,prediction_sim_mesh_ampmod_001.csv,0.5229750109725052,0.01620708235058632
+sim_impacts_res_001,prediction_sim_impacts_res_001.csv,0.5203966041964403,0.016167080357659815

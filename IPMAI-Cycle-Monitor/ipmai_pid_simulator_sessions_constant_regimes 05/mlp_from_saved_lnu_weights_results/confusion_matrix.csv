@@ -1,0 +1,6 @@
+,healthy,impacts_res,low_order,mesh_ampmod,orig_ripple
+healthy,5,0,0,0,0
+impacts_res,0,1,0,0,0
+low_order,0,0,1,0,0
+mesh_ampmod,0,0,0,1,0
+orig_ripple,0,0,0,0,2

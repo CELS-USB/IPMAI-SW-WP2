@@ -1,0 +1,228 @@
+=== /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed ===
+[01mRunning Sphinx v9.1.0[39;49;00m
+[01mloading translations [en]... [39;49;00mdone
+[01mmaking output directory... [39;49;00mdone
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mtargets for 15 source files that are out of date
+[01mupdating environment: [39;49;00m[new config] 15 added, 0 changed, 0 removed
+[2K[01mreading sources... [39;49;00m[  7%] [35mdata_structure[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 13%] [35mindex[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 20%] [35mintroduction[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 27%] [35mlearning_entropy[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 33%] [35mlnu_analysis[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 40%] [35mlnu_monitoring[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 47%] [35mmlp_classifier[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 53%] [35mnormalization_and_pca[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 60%] [35mnotation[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 67%] [35moutputs[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 73%] [35mpca_and_weight_space[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 80%] [35mpipeline_overview[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 87%] [35msaliency_maps[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 93%] [35mviewers[39;49;00m
+[2K[01mreading sources... [39;49;00m[100%] [35mwindows_setup[39;49;00m
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m
+[01mcopying static files... [39;49;00m
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/basic.css
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/documentation_options.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/language_data.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/alabaster.css
+[01mcopying static files: [39;49;00mdone
+[01mcopying extra files... [39;49;00m
+[01mcopying extra files: [39;49;00mdone
+[01mcopying assets: [39;49;00mdone
+[2K[01mwriting output... [39;49;00m[  7%] [32mdata_structure[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 13%] [32mindex[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 20%] [32mintroduction[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 27%] [32mlearning_entropy[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 33%] [32mlnu_analysis[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 40%] [32mlnu_monitoring[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 47%] [32mmlp_classifier[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 53%] [32mnormalization_and_pca[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 60%] [32mnotation[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 67%] [32moutputs[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 73%] [32mpca_and_weight_space[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 80%] [32mpipeline_overview[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 87%] [32msaliency_maps[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 93%] [32mviewers[39;49;00m
+[2K[01mwriting output... [39;49;00m[100%] [32mwindows_setup[39;49;00m
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+The HTML pages are in _build/html.
+BUILD_OK
+=== /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed ===
+[01mRunning Sphinx v9.1.0[39;49;00m
+[01mloading translations [en]... [39;49;00mdone
+[01mmaking output directory... [39;49;00mdone
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mtargets for 20 source files that are out of date
+[01mupdating environment: [39;49;00m[new config] 20 added, 0 changed, 0 removed
+[2K[01mreading sources... [39;49;00m[  5%] [35mcomplete_pipeline[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 10%] [35mfault_regimes[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 15%] [35mgenerated_data_structure[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 20%] [35mindex[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 25%] [35mintroduction[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 30%] [35mlearning_entropy[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 35%] [35mlnu_analysis[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 40%] [35mlnu_monitoring[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 45%] [35mmlp_classifier[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 50%] [35mnormalization_and_pca[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 55%] [35mnotation[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 60%] [35mpca_and_weight_space[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 65%] [35mpid_control_loop[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 70%] [35mpractical_interpretation[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 75%] [35msaliency_maps[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 80%] [35msetup_reference[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 85%] [35msimulator_principle[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 90%] [35mvariables[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 95%] [35mvibration_features[39;49;00m
+[2K[01mreading sources... [39;49;00m[100%] [35mviewers[39;49;00m
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m
+[01mcopying static files... [39;49;00m
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed/_build/html/_static/basic.css
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed/_build/html/_static/documentation_options.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed/_build/html/_static/language_data.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed/_build/html/_static/alabaster.css
+[01mcopying static files: [39;49;00mdone
+[01mcopying extra files... [39;49;00m
+[01mcopying extra files: [39;49;00mdone
+[01mcopying assets: [39;49;00mdone
+[2K[01mwriting output... [39;49;00m[  5%] [32mcomplete_pipeline[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 10%] [32mfault_regimes[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 15%] [32mgenerated_data_structure[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 20%] [32mindex[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 25%] [32mintroduction[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 30%] [32mlearning_entropy[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 35%] [32mlnu_analysis[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 40%] [32mlnu_monitoring[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 45%] [32mmlp_classifier[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 50%] [32mnormalization_and_pca[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 55%] [32mnotation[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 60%] [32mpca_and_weight_space[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 65%] [32mpid_control_loop[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 70%] [32mpractical_interpretation[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 75%] [32msaliency_maps[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 80%] [32msetup_reference[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 85%] [32msimulator_principle[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 90%] [32mvariables[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 95%] [32mvibration_features[39;49;00m
+[2K[01mwriting output... [39;49;00m[100%] [32mviewers[39;49;00m
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+The HTML pages are in _build/html.
+BUILD_OK
+=== /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed ===
+[01mRunning Sphinx v9.1.0[39;49;00m
+[01mloading translations [en]... [39;49;00mdone
+[01mmaking output directory... [39;49;00mdone
+[01mbuilding [mo]: [39;49;00mtargets for 0 po files that are out of date
+[01mwriting output... [39;49;00m
+[01mbuilding [html]: [39;49;00mtargets for 15 source files that are out of date
+[01mupdating environment: [39;49;00m[new config] 15 added, 0 changed, 0 removed
+[2K[01mreading sources... [39;49;00m[  7%] [35mdata_structure[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 13%] [35mindex[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 20%] [35mintroduction[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 27%] [35mlearning_entropy[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 33%] [35mlnu_analysis[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 40%] [35mlnu_monitoring[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 47%] [35mmlp_classifier[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 53%] [35mnormalization_and_pca[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 60%] [35mnotation[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 67%] [35moutputs[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 73%] [35mpca_and_weight_space[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 80%] [35mpipeline_overview[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 87%] [35msaliency_maps[39;49;00m
+[2K[01mreading sources... [39;49;00m[ 93%] [35mviewers[39;49;00m
+[2K[01mreading sources... [39;49;00m[100%] [35mwindows_setup[39;49;00m
+[01mlooking for now-outdated files... [39;49;00mnone found
+[01mpickling environment... [39;49;00mdone
+[01mchecking consistency... [39;49;00mdone
+[01mpreparing documents... [39;49;00mdone
+[01mcopying assets... [39;49;00m
+[01mcopying static files... [39;49;00m
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/basic.css
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/documentation_options.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/language_data.js
+Writing evaluated template result to /mnt/data/stdsphinxfix/Cycle_Monitor_Feature_Extraction_SW (pyside6 MIT lic)/Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed/_build/html/_static/alabaster.css
+[01mcopying static files: [39;49;00mdone
+[01mcopying extra files... [39;49;00m
+[01mcopying extra files: [39;49;00mdone
+[01mcopying assets: [39;49;00mdone
+[2K[01mwriting output... [39;49;00m[  7%] [32mdata_structure[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 13%] [32mindex[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 20%] [32mintroduction[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 27%] [32mlearning_entropy[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 33%] [32mlnu_analysis[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 40%] [32mlnu_monitoring[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 47%] [32mmlp_classifier[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 53%] [32mnormalization_and_pca[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 60%] [32mnotation[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 67%] [32moutputs[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 73%] [32mpca_and_weight_space[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 80%] [32mpipeline_overview[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 87%] [32msaliency_maps[39;49;00m
+[2K[01mwriting output... [39;49;00m[ 93%] [32mviewers[39;49;00m
+[2K[01mwriting output... [39;49;00m[100%] [32mwindows_setup[39;49;00m
+[01mgenerating indices... [39;49;00mgenindex done
+[01mwriting additional pages... [39;49;00msearch done
+[01mdumping search index in English (code: en)... [39;49;00mdone
+[01mdumping object inventory... [39;49;00mdone
+[01mbuild succeeded.[39;49;00m
+
+The HTML pages are in _build/html.
+BUILD_OK
+
+
+LINK CHECK
+Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed
+  index bad: 6 ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+  all html files with bad links: 17
+    data_structure.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    index.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    introduction.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    learning_entropy.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    lnu_analysis.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed
+  index bad: 6 ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+  all html files with bad links: 22
+    complete_pipeline.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    fault_regimes.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    generated_data_structure.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    index.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    introduction.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=f6a572b4', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed
+  index bad: 6 ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+  all html files with bad links: 17
+    data_structure.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    index.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    introduction.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    learning_entropy.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+    lnu_analysis.html: ['_static/pygments.css?v=5ecbeea2', '_static/basic.css?v=b08954a9', '_static/alabaster.css?v=27fed22d', '_static/documentation_options.js?v=5929fcd5', '_static/doctools.js?v=fd6eb6e6', '_static/sphinx_highlight.js?v=6ffebe34']
+
+CORRECTED LINK CHECK (query strings ignored)
+Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed
+  index.html missing local files: 0
+  all HTML pages with missing local files: 0
+ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed
+  index.html missing local files: 0
+  all HTML pages with missing local files: 0
+Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed
+  index.html missing local files: 0
+  all HTML pages with missing local files: 0

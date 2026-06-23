@@ -1,0 +1,3 @@
+run_name,file_name,prediction_csv,Q_final,RMSE_norm
+250922_CobotStandRawAccX _art_pert,250922_CobotStandRawAccX _art_pert.csv,prediction_250922_CobotStandRawAccX__art_pert.csv,251.3625504,0.09155230755
+250922_CobotStandRawAccX,250922_CobotStandRawAccX.csv,prediction_250922_CobotStandRawAccX.csv,262.8815951,0.09362656681

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Robotic Data Structure &#8212; Robotic Cycle Monitor  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PCA and Weight-Space Interpretation" href="pca_and_weight_space.html" />
+    <link rel="prev" title="Pipeline Overview" href="pipeline_overview.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="robotic-data-structure">
+<h1>Robotic Data Structure<a class="headerlink" href="#robotic-data-structure" title="Link to this heading">¶</a></h1>
+<section id="input-data">
+<h2>Input data<a class="headerlink" href="#input-data" title="Link to this heading">¶</a></h2>
+<p>The package processes CSV files from <code class="docutils literal notranslate"><span class="pre">data_robotic_cycle_monitor</span></code>.</p>
+<p>Typical filename:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0200</span><span class="n">g_090d_symFE_tv1_x005</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p>Possible information encoded in names:</p>
+<ul class="simple">
+<li><p>load in grams,</p></li>
+<li><p>angle,</p></li>
+<li><p>operating condition.</p></li>
+</ul>
+</section>
+<section id="reference-run">
+<h2>Reference run<a class="headerlink" href="#reference-run" title="Link to this heading">¶</a></h2>
+<p>The first file is automatically selected as the reference run.</p>
+<p>Reference run is used for:</p>
+<ul class="simple">
+<li><p>normalization,</p></li>
+<li><p>PCA basis,</p></li>
+<li><p>weight comparison,</p></li>
+<li><p>Learning Entropy reference,</p></li>
+<li><p>saliency comparison.</p></li>
+</ul>
+</section>
+<section id="signal-processing">
+<h2>Signal processing<a class="headerlink" href="#signal-processing" title="Link to this heading">¶</a></h2>
+<p>Signals are loaded from CSV columns and embedded into delayed vectors.</p>
+<p>Typical embedding:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{x}(k)=\begin{bmatrix}u(k)&amp;u(k-1)&amp;\cdots&amp;y(k-1)&amp;y(k-2)&amp;\cdots\end{bmatrix}^T\]</div>
+<p>The embedding labels are stored in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lnu_robotic_dataset</span><span class="o">.</span><span class="n">npz</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Robotic Cycle Monitor</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_overview.html">Pipeline Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robotic Data Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-data">Input data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-run">Reference run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signal-processing">Signal processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Generated Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_setup.html">Windows Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pipeline_overview.html" title="previous chapter">Pipeline Overview</a></li>
+      <li>Next: <a href="pca_and_weight_space.html" title="next chapter">PCA and Weight-Space Interpretation</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/data_structure.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

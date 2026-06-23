@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+PySide6>=6.6
+pyqtgraph
+openpyxl
+xlrd
+Sphinx

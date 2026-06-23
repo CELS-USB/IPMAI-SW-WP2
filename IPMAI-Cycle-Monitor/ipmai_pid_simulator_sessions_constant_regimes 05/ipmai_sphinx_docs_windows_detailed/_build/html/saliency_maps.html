@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Saliency Maps &#8212; IPMAI Cycle Monitor Framework  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=f6a572b4" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MLP Classifier" href="mlp_classifier.html" />
+    <link rel="prev" title="Learning Entropy" href="learning_entropy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IPMAI Cycle Monitor Framework</a></h1>
+
+
+
+<p class="blurb">Explainable cycle monitoring using PID simulation, LNU weights, Learning Entropy and saliency maps</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complete_pipeline.html">Complete Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator_principle.html">Simulator Principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pid_control_loop.html">PID Control Loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">Variables and Their Meaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fault_regimes.html">Fault and Artifact Regimes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibration_features.html">Vibration Synthesis and Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_data_structure.html">Generated Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Visualization Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Saliency Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interpretation">Interpretation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axis-labels">Axis labels</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practical_interpretation.html">Practical Industrial Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_reference.html">Setup Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring and Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="learning_entropy.html" title="previous chapter">Learning Entropy</a></li>
+      <li>Next: <a href="mlp_classifier.html" title="next chapter">MLP Classifier</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="saliency-maps">
+<h1>Saliency Maps<a class="headerlink" href="#saliency-maps" title="Link to this heading">¶</a></h1>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">¶</a></h2>
+<p>Saliency maps identify which delayed variables, PCA components, or reconstructed physical features contribute most to a change in the learned dynamic law.</p>
+</section>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Link to this heading">¶</a></h2>
+<p>For run or segment <span class="math notranslate nohighlight">\(j\)</span>, the saliency vector is denoted by</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{s}^{(j)}.\]</div>
+<p>The vector <span class="math notranslate nohighlight">\(\mathbf{s}^{(j)}\)</span> is reconstructed from <span class="math notranslate nohighlight">\(\Delta\mathbf{w}^{(j)}\)</span> and from the same feature mapping that was used to construct the LNU input vector <span class="math notranslate nohighlight">\(\mathbf{x}(k)\)</span>.</p>
+</section>
+<section id="interpretation">
+<h2>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading">¶</a></h2>
+<p>A large component of <span class="math notranslate nohighlight">\(\mathbf{s}^{(j)}\)</span> means that the corresponding variable, delay, or reconstructed feature contributed strongly to the observed weight change. Thus, the map should be interpreted as a contribution to the learned dynamic law, not as a generic black-box feature importance score.</p>
+</section>
+<section id="axis-labels">
+<h2>Axis labels<a class="headerlink" href="#axis-labels" title="Link to this heading">¶</a></h2>
+<p>The y-axis labels in the saliency viewer should therefore correspond to meaningful delayed variables or reconstructed physical quantities whenever this information is available. If only numerical labels are available, they denote components of <span class="math notranslate nohighlight">\(\mathbf{x}(k)\)</span> or components reconstructed from the PCA embedding.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/saliency_maps.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

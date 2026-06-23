@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Learning Entropy &#8212; Harmonic Drive Cycle Monitor  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Saliency Maps" href="saliency_maps.html" />
+    <link rel="prev" title="LNU Monitoring" href="lnu_monitoring.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="learning-entropy">
+<h1>Learning Entropy<a class="headerlink" href="#learning-entropy" title="Link to this heading">¶</a></h1>
+<p>Learning Entropy (LE) is interpreted here as a learning-based novelty measure. It is derived from the effort needed to adapt the local LNU model, not from Shannon-type probability estimates.</p>
+<section id="weight-increment">
+<h2>Weight increment<a class="headerlink" href="#weight-increment" title="Link to this heading">¶</a></h2>
+<p>For consecutive runs, windows, or cycles, the learned weight increment is</p>
+<div class="math notranslate nohighlight">
+\[\Delta\mathbf{w}^{(j)}=\mathbf{w}^{(j)}-\mathbf{w}^{(j-1)}.\]</div>
+<p>Large or unusual values of <span class="math notranslate nohighlight">\(\Delta\mathbf{w}^{(j)}\)</span> indicate that the local dynamic law has changed and that the learning system must adapt more strongly.</p>
+</section>
+<section id="learning-information-and-aisle">
+<h2>Learning Information and AISLE<a class="headerlink" href="#learning-information-and-aisle" title="Link to this heading">¶</a></h2>
+<p>For an individual sample or learning step, Learning Information is denoted by <span class="math notranslate nohighlight">\(L(k)\)</span>. When the individual-sample approximation is emphasized, the notation <span class="math notranslate nohighlight">\(AISLE(k)\)</span> is used.</p>
+<p>In the practical implementation, the score is evaluated from the magnitude or unusualness of the weight increments. A generic normalized form may be written as</p>
+<div class="math notranslate nohighlight">
+\[AISLE(k) \sim F\left(\left|\Delta\mathbf{w}(k)\right|\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(F(\cdot)\)</span> denotes the implemented normalization, thresholding, or neighborhood-based evaluation.</p>
+</section>
+<section id="frame-level-learning-entropy">
+<h2>Frame-level Learning Entropy<a class="headerlink" href="#frame-level-learning-entropy" title="Link to this heading">¶</a></h2>
+<p>For a frame of <span class="math notranslate nohighlight">\(N\)</span> samples or for a sequence of learning steps, Learning Entropy can be interpreted as an aggregation of individual Learning Information values:</p>
+<div class="math notranslate nohighlight">
+\[LE \approx \frac{1}{N}\sum_{k=1}^{N}L(k).\]</div>
+<p>In this package, the saved LE-like curves are therefore best read as indicators of changing learned dynamics. They are complementary to prediction errors and saliency maps.</p>
+</section>
+<section id="relation-to-saliency">
+<h2>Relation to saliency<a class="headerlink" href="#relation-to-saliency" title="Link to this heading">¶</a></h2>
+<p>LE indicates how unusual the learning effort is. Saliency further distributes this learning effort back to the delayed variables or PCA-derived components that contributed to the change.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Harmonic Drive Cycle Monitor</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_overview.html">Pipeline Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Harmonic Drive Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Learning Entropy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#weight-increment">Weight increment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#learning-information-and-aisle">Learning Information and AISLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frame-level-learning-entropy">Frame-level Learning Entropy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relation-to-saliency">Relation to saliency</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Generated Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_setup.html">Windows Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="lnu_monitoring.html" title="previous chapter">LNU Monitoring</a></li>
+      <li>Next: <a href="saliency_maps.html" title="next chapter">Saliency Maps</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/learning_entropy.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

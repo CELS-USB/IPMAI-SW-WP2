@@ -1,0 +1,48 @@
+{
+  "weights_csv": "robotic_lnu_cycle_monitor_results\\weights_by_file.csv",
+  "n_samples": 18,
+  "n_features": 6,
+  "n_classes": 18,
+  "label_mode": "load_angle",
+  "label_source": "derived_load_angle",
+  "classes": [
+    "load_0000g_angle_060d",
+    "load_0000g_angle_090d",
+    "load_0000g_angle_180d",
+    "load_0200g_angle_060d",
+    "load_0200g_angle_090d",
+    "load_0200g_angle_180d",
+    "load_0300g_angle_060d",
+    "load_0300g_angle_090d",
+    "load_0300g_angle_180d",
+    "load_0400g_angle_060d",
+    "load_0400g_angle_090d",
+    "load_0400g_angle_180d",
+    "load_0600g_angle_060d",
+    "load_0600g_angle_090d",
+    "load_0600g_angle_180d",
+    "load_1200g_angle_060d",
+    "load_1200g_angle_090d",
+    "load_1200g_angle_180d"
+  ],
+  "weight_columns": [
+    "w_0",
+    "w_1",
+    "w_2",
+    "w_3",
+    "w_4",
+    "w_5"
+  ],
+  "standardize_weights": true,
+  "hidden_layer_sizes": [
+    8
+  ],
+  "activation": "tanh",
+  "solver": "lbfgs",
+  "alpha": 0.0001,
+  "max_iter": 5000,
+  "use_train_test_split": false,
+  "exclude_reference_file": false,
+  "note": "Labels are filename/metadata-derived because true healthy/faulty labels are unknown for Robotic.",
+  "training_accuracy": 1.0
+}

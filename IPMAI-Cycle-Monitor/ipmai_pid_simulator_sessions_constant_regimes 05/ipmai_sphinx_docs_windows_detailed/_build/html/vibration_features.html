@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vibration Synthesis and Features &#8212; IPMAI Cycle Monitor Framework  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=f6a572b4" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Generated Data Structure" href="generated_data_structure.html" />
+    <link rel="prev" title="Fault and Artifact Regimes" href="fault_regimes.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IPMAI Cycle Monitor Framework</a></h1>
+
+
+
+<p class="blurb">Explainable cycle monitoring using PID simulation, LNU weights, Learning Entropy and saliency maps</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complete_pipeline.html">Complete Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator_principle.html">Simulator Principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pid_control_loop.html">PID Control Loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">Variables and Their Meaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fault_regimes.html">Fault and Artifact Regimes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Vibration Synthesis and Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#control-loop-sampling">Control-loop sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vibration-sampling">Vibration sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#high-frequency-envelope-rms">High-frequency envelope RMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#order-amplitude-a2x">Order amplitude <code class="docutils literal notranslate"><span class="pre">a2x</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mesh-amplitude-amesh">Mesh amplitude <code class="docutils literal notranslate"><span class="pre">amesh</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-features-instead-of-raw-10-khz-signal">Why features instead of raw 10 kHz signal?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated_data_structure.html">Generated Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Visualization Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practical_interpretation.html">Practical Industrial Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_reference.html">Setup Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring and Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="fault_regimes.html" title="previous chapter">Fault and Artifact Regimes</a></li>
+      <li>Next: <a href="generated_data_structure.html" title="next chapter">Generated Data Structure</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="vibration-synthesis-and-features">
+<h1>Vibration Synthesis and Features<a class="headerlink" href="#vibration-synthesis-and-features" title="Link to this heading">¶</a></h1>
+<p>The simulator has two time scales:</p>
+<ul class="simple">
+<li><p>control-loop scale,</p></li>
+<li><p>vibration scale.</p></li>
+</ul>
+<section id="control-loop-sampling">
+<h2>Control-loop sampling<a class="headerlink" href="#control-loop-sampling" title="Link to this heading">¶</a></h2>
+<p>The PID loop is sampled at:</p>
+<div class="math notranslate nohighlight">
+\[f_s = 100\ \mathrm{Hz}.\]</div>
+<p>This corresponds to the time step:</p>
+<div class="math notranslate nohighlight">
+\[T_s = 0.01\ \mathrm{s}.\]</div>
+</section>
+<section id="vibration-sampling">
+<h2>Vibration sampling<a class="headerlink" href="#vibration-sampling" title="Link to this heading">¶</a></h2>
+<p>Within each control interval, a high-frequency vibration segment is synthesized at:</p>
+<div class="math notranslate nohighlight">
+\[f_{vib} = 10\,000\ \mathrm{Hz}.\]</div>
+<p>This is intended to approximate the fact that industrial systems often have:</p>
+<ul class="simple">
+<li><p>slow control measurements,</p></li>
+<li><p>fast vibration or acoustic measurements.</p></li>
+</ul>
+</section>
+<section id="high-frequency-envelope-rms">
+<h2>High-frequency envelope RMS<a class="headerlink" href="#high-frequency-envelope-rms" title="Link to this heading">¶</a></h2>
+<p>The vibration segment is band-pass filtered. Then the Hilbert envelope is computed and summarized by RMS:</p>
+<div class="math notranslate nohighlight">
+\[hf\_rms =
+\sqrt{
+    \frac{1}{N}
+    \sum_{i=1}^{N}
+    | \mathcal{H}\{v_{bp}(i)\} |^2
+}.\]</div>
+<p>Practical meaning:</p>
+<ul class="simple">
+<li><p>broad high-frequency energy,</p></li>
+<li><p>resonance activity,</p></li>
+<li><p>impulsive excitation,</p></li>
+<li><p>high-frequency roughness.</p></li>
+</ul>
+</section>
+<section id="order-amplitude-a2x">
+<h2>Order amplitude <code class="docutils literal notranslate"><span class="pre">a2x</span></code><a class="headerlink" href="#order-amplitude-a2x" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">a2x</span></code> variable estimates the amplitude near twice the rotational frequency.</p>
+<p>Practical meaning:</p>
+<ul class="simple">
+<li><p>second-order rotating component,</p></li>
+<li><p>misalignment-like behavior,</p></li>
+<li><p>low-order mechanical artifact.</p></li>
+</ul>
+</section>
+<section id="mesh-amplitude-amesh">
+<h2>Mesh amplitude <code class="docutils literal notranslate"><span class="pre">amesh</span></code><a class="headerlink" href="#mesh-amplitude-amesh" title="Link to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">amesh</span></code> variable estimates the amplitude near a high-order mesh-like component.</p>
+<p>Practical meaning:</p>
+<ul class="simple">
+<li><p>gear mesh,</p></li>
+<li><p>repeated contact,</p></li>
+<li><p>high-order angular periodicity.</p></li>
+</ul>
+</section>
+<section id="why-features-instead-of-raw-10-khz-signal">
+<h2>Why features instead of raw 10 kHz signal?<a class="headerlink" href="#why-features-instead-of-raw-10-khz-signal" title="Link to this heading">¶</a></h2>
+<p>The LNU monitor currently operates at the control-loop time scale. Therefore, high-frequency vibration is summarized into physically meaningful features per control step.</p>
+<p>This keeps the model compact while still allowing vibration-related regimes to affect the learned system state.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/vibration_features.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

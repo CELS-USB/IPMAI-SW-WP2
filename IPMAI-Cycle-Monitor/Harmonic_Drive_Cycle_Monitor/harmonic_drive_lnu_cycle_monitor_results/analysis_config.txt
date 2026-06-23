@@ -1,0 +1,60 @@
+{
+  "DATA_ROOT": "data_harmonic_drive_cycle_monitor",
+  "OUTPUT_DIR": "harmonic_drive_lnu_cycle_monitor_results",
+  "FILE_PATTERNS": [
+    "*.csv",
+    "*.xls",
+    "*.xlsx"
+  ],
+  "REFERENCE_FILE": "250922_CobotStandRawAccX _art_pert.csv",
+  "REFERENCE_MODE_FOR_LE": "reference",
+  "REFERENCE_POLICY_NOTE": "The first sorted data file is used as reference/baseline only because the healthy file is unknown. This is not a claim that the reference file is healthy.",
+  "CONTINUAL_WEIGHT_TRANSFER": true,
+  "NORMALIZATION_MODE": "reference_file",
+  "SELECTED_VARIABLES": [
+    "a",
+    "as",
+    "ab",
+    "E",
+    "W"
+  ],
+  "DESIRED_COLUMN": "a",
+  "CONTROL_COLUMN": "W",
+  "OUTPUT_COLUMN": "a",
+  "EXTRA_INPUT_COLUMNS": [
+    "as",
+    "ab",
+    "E"
+  ],
+  "NSTART": 0,
+  "NSTOP": null,
+  "DN": 1,
+  "ND": 2,
+  "NU": 9,
+  "NY": 2,
+  "L_U": 3,
+  "R": 1,
+  "USE_PCA": true,
+  "PCA_VAR_THRESHOLD": 0.995,
+  "PCA_COMPONENTS_USED": 13,
+  "MU": 1000.0,
+  "EPOCHS": 20,
+  "x_labels": [
+    "d[k-2]",
+    "d[k-1]",
+    "u[k-11]",
+    "u[k-10]",
+    "u[k-9]",
+    "u[k-8]",
+    "u[k-7]",
+    "u[k-6]",
+    "u[k-5]",
+    "u[k-4]",
+    "u[k-3]",
+    "y[k-2]",
+    "y[k-1]",
+    "as[k-0]",
+    "ab[k-0]",
+    "E[k-0]"
+  ]
+}

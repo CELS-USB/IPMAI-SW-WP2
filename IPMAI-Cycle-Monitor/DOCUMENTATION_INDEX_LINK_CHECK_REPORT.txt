@@ -1,0 +1,29 @@
+DOCUMENTATION: ipmai_pid_simulator_sessions_constant_regimes 05/ipmai_sphinx_docs_windows_detailed
+  index.html links checked: 103
+  index.html bad links: 0
+  all HTML links checked: 582
+  all HTML bad links: 0
+  exists pca_and_weight_space.html: True
+  exists normalization_and_pca.html: True
+  exists lnu_monitoring.html: True
+  exists lnu_analysis.html: True
+
+DOCUMENTATION: Harmonic_Drive_Cycle_Monitor/harmonic_drive_cycle_monitor_sphinx_docs_windows_detailed
+  index.html links checked: 67
+  index.html bad links: 0
+  all HTML links checked: 351
+  all HTML bad links: 0
+  exists pca_and_weight_space.html: True
+  exists normalization_and_pca.html: True
+  exists lnu_monitoring.html: True
+  exists lnu_analysis.html: True
+
+DOCUMENTATION: Robotic_Cycle_Monitor/robotic_cycle_monitor_sphinx_docs_windows_detailed
+  index.html links checked: 67
+  index.html bad links: 0
+  all HTML links checked: 351
+  all HTML bad links: 0
+  exists pca_and_weight_space.html: True
+  exists normalization_and_pca.html: True
+  exists lnu_monitoring.html: True
+  exists lnu_analysis.html: True

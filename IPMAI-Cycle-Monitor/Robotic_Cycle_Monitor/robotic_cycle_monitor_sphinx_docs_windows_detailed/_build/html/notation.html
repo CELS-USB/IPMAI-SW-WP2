@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notation and Terminology &#8212; Robotic Cycle Monitor  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pipeline Overview" href="pipeline_overview.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="notation-and-terminology">
+<h1>Notation and Terminology<a class="headerlink" href="#notation-and-terminology" title="Link to this heading">¶</a></h1>
+<p>This documentation follows the notation used in the HONU, IPLNA, and Learning Entropy publications. Scalar variables are written as italic symbols, for example <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(e\)</span>, and <span class="math notranslate nohighlight">\(k\)</span>. Vectors are written as bold lowercase symbols, for example <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{w}\)</span>, and <span class="math notranslate nohighlight">\(\Delta\mathbf{w}\)</span>. Matrices are written as bold uppercase symbols, for example <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{W}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{C}\)</span>. The discrete-time or sample index is <span class="math notranslate nohighlight">\(k\)</span>, and <span class="math notranslate nohighlight">\((\cdot)^T\)</span> denotes transposition.</p>
+<section id="core-lnu-notation">
+<h2>Core LNU notation<a class="headerlink" href="#core-lnu-notation" title="Link to this heading">¶</a></h2>
+<p>For the linear neural unit (LNU), the input vector, the weight vector, and the neural output are denoted by</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{x}(k)=\begin{bmatrix}x_0(k)&amp;x_1(k)&amp;\cdots&amp;x_n(k)\end{bmatrix}^T,\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{w}(k)=\begin{bmatrix}w_0(k)&amp;w_1(k)&amp;\cdots&amp;w_n(k)\end{bmatrix}^T,\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\tilde{y}(k)=\mathbf{w}^T(k)\mathbf{x}(k).\]</div>
+<p>The measured or target value is denoted by <span class="math notranslate nohighlight">\(y(k)\)</span>. The model residual used for learning is</p>
+<div class="math notranslate nohighlight">
+\[e(k)=y(k)-\tilde{y}(k).\]</div>
+<p>In the PID simulation module, the control-loop regulation deviation is written as <span class="math notranslate nohighlight">\(e_c(k)=d(k)-y(k)\)</span>, where <span class="math notranslate nohighlight">\(d(k)\)</span> is the desired value and <span class="math notranslate nohighlight">\(y(k)\)</span> is the controlled output. The subscript distinguishes the control-loop regulation deviation from the LNU model residual.</p>
+</section>
+<section id="weight-increments-and-le-notation">
+<h2>Weight increments and LE notation<a class="headerlink" href="#weight-increments-and-le-notation" title="Link to this heading">¶</a></h2>
+<p>The weight increment between two consecutive runs, windows, or cycles is</p>
+<div class="math notranslate nohighlight">
+\[\Delta\mathbf{w}^{(j)}=\mathbf{w}^{(j)}-\mathbf{w}^{(j-1)}.\]</div>
+<p>Learning Information is denoted by <span class="math notranslate nohighlight">\(L(k)\)</span> when it refers to the novelty of an individual sample or learning step. Approximate Individual Sample Learning Entropy is denoted by <span class="math notranslate nohighlight">\(AISLE(k)\)</span> when the individual-sample approximation is emphasized. Learning Entropy over a frame or interval is denoted by <span class="math notranslate nohighlight">\(LE\)</span> and may be interpreted as an aggregation of <span class="math notranslate nohighlight">\(L(k)\)</span>, for example</p>
+<div class="math notranslate nohighlight">
+\[LE \approx \frac{1}{N}\sum_{k=1}^{N}L(k).\]</div>
+<p>In this software, the practical LE-like score is computed from the magnitude or unusualness of <span class="math notranslate nohighlight">\(\Delta\mathbf{w}\)</span>. Thus, LE is not interpreted as a Shannon-probability measure. It is interpreted as a learning-based novelty measure derived from the effort needed to adapt the local dynamic model.</p>
+</section>
+<section id="practical-variable-names-in-code">
+<h2>Practical variable names in code<a class="headerlink" href="#practical-variable-names-in-code" title="Link to this heading">¶</a></h2>
+<p>Some Python variables are kept short for compatibility with existing scripts and stored files. For example, <code class="docutils literal notranslate"><span class="pre">W</span></code> in code may store a matrix of run-wise weight vectors and corresponds to <span class="math notranslate nohighlight">\(\mathbf{W}\)</span> in the documentation. Similarly, <code class="docutils literal notranslate"><span class="pre">dW</span></code> corresponds to <span class="math notranslate nohighlight">\(\Delta\mathbf{w}\)</span> or to a matrix of such increments depending on context. The scientific notation in this documentation is authoritative; the code names are preserved for backward compatibility.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Robotic Cycle Monitor</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Notation and Terminology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-lnu-notation">Core LNU notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weight-increments-and-le-notation">Weight increments and LE notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#practical-variable-names-in-code">Practical variable names in code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline_overview.html">Pipeline Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Robotic Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Viewers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Generated Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_setup.html">Windows Setup</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="introduction.html" title="previous chapter">Introduction</a></li>
+      <li>Next: <a href="pipeline_overview.html" title="next chapter">Pipeline Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/notation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

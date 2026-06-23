@@ -1,0 +1,3 @@
+file_name,run_name,is_reference_file,N_samples,N_training_samples,dt_median_sec,Q_final,RMSE_norm,MAE_norm,target_label,predicted_label,P_250922_CobotStandRawAccX _art_pert.csv,P_250922_CobotStandRawAccX.csv
+250922_CobotStandRawAccX _art_pert.csv,250922_CobotStandRawAccX _art_pert,True,30000,29989,0,251.3625504,0.09155230755,0.0541028749,250922_CobotStandRawAccX _art_pert.csv,250922_CobotStandRawAccX _art_pert.csv,0.9998654966,0.0001345033878
+250922_CobotStandRawAccX.csv,250922_CobotStandRawAccX,False,30000,29989,0,262.8815951,0.09362656681,0.05450133853,250922_CobotStandRawAccX.csv,250922_CobotStandRawAccX.csv,8.436358115e-05,0.9999156364

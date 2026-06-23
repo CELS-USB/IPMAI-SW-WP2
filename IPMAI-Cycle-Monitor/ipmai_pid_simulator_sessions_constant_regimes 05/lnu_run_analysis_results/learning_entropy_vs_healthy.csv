@@ -1,0 +1,7 @@
+run_name,fault_id,fault_name,LE_vs_healthy,LE_vs_healthy_norm
+sim_healthy_001,0,healthy,0.0,0.0
+sim_ripple_001,1,orig_ripple,10.838831653864935,0.4451986993590241
+sim_ripple_002,1,orig_ripple,24.34605417641544,0.999999999999959
+sim_low_order_001,2,low_order,7.448045433417334,0.3059241296124328
+sim_mesh_ampmod_001,3,mesh_ampmod,9.068993528465318,0.3725036288323995
+sim_impacts_res_001,4,impacts_res,0.0315393415750217,0.0012954600916633655

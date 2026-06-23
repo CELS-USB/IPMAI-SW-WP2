@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PID Control Loop &#8212; IPMAI Cycle Monitor Framework  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=f6a572b4" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables and Their Meaning" href="variables.html" />
+    <link rel="prev" title="Simulator Principle" href="simulator_principle.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">IPMAI Cycle Monitor Framework</a></h1>
+
+
+
+<p class="blurb">Explainable cycle monitoring using PID simulation, LNU weights, Learning Entropy and saliency maps</p>
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notation.html">Notation and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complete_pipeline.html">Complete Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator_principle.html">Simulator Principle</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PID Control Loop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mechanical-plant">Mechanical plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-and-regulation-deviation">Reference and regulation deviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controller">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relation-to-lnu-monitoring">Relation to LNU monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">Variables and Their Meaning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fault_regimes.html">Fault and Artifact Regimes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibration_features.html">Vibration Synthesis and Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated_data_structure.html">Generated Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewers.html">Visualization Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lnu_analysis.html">LNU Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca_and_weight_space.html">PCA and Weight-Space Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning_entropy.html">Learning Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saliency_maps.html">Saliency Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp_classifier.html">MLP Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practical_interpretation.html">Practical Industrial Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_reference.html">Setup Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lnu_monitoring.html">LNU Monitoring and Analysis</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="normalization_and_pca.html">Normalization, PCA, and Weight-Space Interpretation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="simulator_principle.html" title="previous chapter">Simulator Principle</a></li>
+      <li>Next: <a href="variables.html" title="next chapter">Variables and Their Meaning</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="pid-control-loop">
+<h1>PID Control Loop<a class="headerlink" href="#pid-control-loop" title="Link to this heading">¶</a></h1>
+<p>The simulated process is a PID-controlled second-order mechanical system. The control loop is included so that the monitoring pipeline is tested on controlled dynamics, not only on passive open-loop signals.</p>
+<section id="mechanical-plant">
+<h2>Mechanical plant<a class="headerlink" href="#mechanical-plant" title="Link to this heading">¶</a></h2>
+<p>The plant state is the vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{x}_p(k)=\begin{bmatrix}\theta(k)\\\omega(k)\end{bmatrix},\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta(k)\)</span> is angular position and <span class="math notranslate nohighlight">\(\omega(k)\)</span> is angular velocity. The controlled output is</p>
+<div class="math notranslate nohighlight">
+\[y(k)=\theta(k).\]</div>
+</section>
+<section id="reference-and-regulation-deviation">
+<h2>Reference and regulation deviation<a class="headerlink" href="#reference-and-regulation-deviation" title="Link to this heading">¶</a></h2>
+<p>The desired value is denoted by <span class="math notranslate nohighlight">\(d(k)\)</span>. The PID control-loop regulation deviation is</p>
+<div class="math notranslate nohighlight">
+\[e_c(k)=d(k)-y(k).\]</div>
+<p>The subscript in <span class="math notranslate nohighlight">\(e_c(k)\)</span> distinguishes the control-loop regulation deviation from the LNU model residual <span class="math notranslate nohighlight">\(e(k)=y(k)-\tilde{y}(k)\)</span>.</p>
+</section>
+<section id="controller">
+<h2>Controller<a class="headerlink" href="#controller" title="Link to this heading">¶</a></h2>
+<p>The PID controller computes the control input <span class="math notranslate nohighlight">\(u(k)\)</span> from proportional, integral, and derivative components of <span class="math notranslate nohighlight">\(e_c(k)\)</span>. The simulated faults and disturbances affect the plant response, and the LNU module subsequently learns local dynamic laws from the delayed measured variables.</p>
+</section>
+<section id="relation-to-lnu-monitoring">
+<h2>Relation to LNU monitoring<a class="headerlink" href="#relation-to-lnu-monitoring" title="Link to this heading">¶</a></h2>
+<p>The LNU input vector <span class="math notranslate nohighlight">\(\mathbf{x}(k)\)</span> may contain delayed values of the reference, control input, measured output, and vibration-derived features. The learned vector <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> therefore summarizes local controlled dynamics rather than only the raw output trajectory.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &#169;.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/pid_control_loop.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
