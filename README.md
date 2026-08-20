@@ -1,6 +1,6 @@
 # IPMAI Cycle Monitor
 
-IPMAI Cycle Monitor is an open-source software suite developed within the **IPMAI (Intelligent Performance Monitoring and Analytics Interface)** project. The software provides a unified environment for simulation, monitoring, feature extraction, machine learning, and explainable analysis of cyclic and dynamical systems.
+IPMAI Cycle Monitor is an open-source software suite developed within the **IPMAI (Interpretable Prescriptive Maintenance using Artificial Intelligence)**  project (https://interreg.at-cz.eu/data/projects/f/27/21.pdf). The software provides a unified environment for simulation, monitoring, feature extraction, machine learning, and explainable analysis of cyclic and dynamical systems.
 
 The suite consists of three independent modules that can be launched individually or through a common graphical launcher.
 
