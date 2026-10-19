@@ -1,6 +1,14 @@
 IPMAI Cycle Monitor Framework
 =============================
 
+**Author:** Ivo Bukovsky
+
+**Affiliations:**
+
+| Department of Computer Science, Faculty of Science
+| University of South Bohemia in České Budějovice
+| CELS – Center for Explainable Learning Systems
+
 This documentation describes the IPMAI cycle-monitoring pipeline for simulated and measured industrial dynamical systems.
 
 .. toctree::

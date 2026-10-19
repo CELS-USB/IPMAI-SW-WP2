@@ -1,6 +1,14 @@
 Robotic Cycle Monitor Documentation
 ===================================
 
+**Author:** Ivo Bukovsky
+
+**Affiliations:**
+
+| Department of Computer Science, Faculty of Science
+| University of South Bohemia in České Budějovice
+| CELS – Center for Explainable Learning Systems
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
