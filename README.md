@@ -93,16 +93,22 @@ https://interreg.at-cz.eu/cz/katalog-projektu/2021-2027/vyzkum-a-inovace/atcz000
 
 Python 3.12 or newer is recommended.
 
+From the repository root, navigate to the software directory:
+
+```powershell
+cd IPMAI-Cycle-Monitor
+```
+
 Install dependencies:
 
-```bash
-pip install -r requirements.txt
+```powershell
+python -m pip install -r requirements.txt
 ```
 
 Start the main launcher:
 
-```bash
-python run_0_main_launcher.py
+```powershell
+python main_launcher.py
 ```
 
 ## Licensing
