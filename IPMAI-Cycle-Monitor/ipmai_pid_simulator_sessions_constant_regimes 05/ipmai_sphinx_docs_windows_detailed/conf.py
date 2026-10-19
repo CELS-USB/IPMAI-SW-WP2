@@ -1,5 +1,5 @@
 project = 'IPMAI Cycle Monitor Framework'
-author = 'IPMAI'
+author = 'Ivo Bukovsky'
 extensions = ['sphinx.ext.mathjax']
 master_doc = 'index'
 html_theme = 'alabaster'

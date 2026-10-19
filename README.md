@@ -135,12 +135,12 @@ Users may copy, redistribute, adapt, and reuse the documentation for any purpose
 
 This repository may include or depend upon third-party libraries distributed under their respective licenses. Users are responsible for complying with the license terms of those components.
 
-## Authors
+## Author and Affiliations
 
-CELS – Computational Engineering and Learning Systems
+**Author:** Ivo Bukovsky
 
-Faculty of Science
-
+Department of Computer Science, Faculty of Science  
+CELS – Computational Engineering and Learning Systems  
 University of South Bohemia in České Budějovice
 
 https://cels.prf.jcu.cz

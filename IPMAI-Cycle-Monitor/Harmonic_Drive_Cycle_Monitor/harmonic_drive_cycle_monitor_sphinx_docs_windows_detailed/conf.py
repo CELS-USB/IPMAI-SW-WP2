@@ -1,5 +1,5 @@
 project = 'Harmonic Drive Cycle Monitor'
-author = 'OpenAI + Ivo Bukovsky'
+author = 'Ivo Bukovsky'
 extensions = ['sphinx.ext.mathjax']
 templates_path = ['_templates']
 exclude_patterns = ['README.rst']
