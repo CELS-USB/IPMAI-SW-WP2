@@ -147,4 +147,10 @@ https://cels.prf.jcu.cz
 
 ## Citation
 
-If you use this software in academic work, please cite the relevant publications associated with the methods implemented in this repository.
+**Software release v1.0.0:** [10.5281/zenodo.23477373](https://doi.org/10.5281/zenodo.23477373)
+
+Suggested software citation:
+
+Bukovsky, I. (2026). *IPMAI Cycle Monitor* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23477373
+
+For the scientific methods implemented in this software, please also cite the relevant methodological publications.
