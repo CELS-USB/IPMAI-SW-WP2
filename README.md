@@ -140,8 +140,8 @@ This repository may include or depend upon third-party libraries distributed und
 **Author:** Ivo Bukovsky
 
 Department of Computer Science, Faculty of Science  
-CELS – Center for Explainable Learning Systems  
-University of South Bohemia in České Budějovice
+University of South Bohemia in České Budějovice  
+CELS – Center for Explainable Learning Systems
 
 https://cels.prf.jcu.cz
 

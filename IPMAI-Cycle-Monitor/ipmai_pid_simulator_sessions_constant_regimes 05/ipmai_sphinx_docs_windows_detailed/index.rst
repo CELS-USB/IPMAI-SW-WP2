@@ -6,8 +6,8 @@ IPMAI Cycle Monitor Framework
 **Affiliations:**
 
 | Department of Computer Science, Faculty of Science
-| CELS – Center for Explainable Learning Systems
 | University of South Bohemia in České Budějovice
+| CELS – Center for Explainable Learning Systems
 
 This documentation describes the IPMAI cycle-monitoring pipeline for simulated and measured industrial dynamical systems.
 
