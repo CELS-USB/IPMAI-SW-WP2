@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "IPMAI Cycle Monitor"
+version: 1.0.0
+authors:
+  - given-names: Ivo
+    family-names: Bukovsky
+    affiliation: "Department of Computer Science, Faculty of Science, University of South Bohemia in České Budějovice; CELS - Center for Explainable Learning Systems"
+abstract: >-
+  Python software suite for simulation and monitoring of cyclic and dynamical
+  systems, including PID Cycle Monitor, Robotic Cycle Monitor, and Harmonic
+  Drive Cycle Monitor. The software supports feature extraction, Linear Neural
+  Unit modelling, Learning Entropy, saliency analysis, PCA, and classification.
+license: MIT
+repository-code: "https://github.com/CELS-USB/IPMAI-SW-WP2"
+keywords:
+  - explainable machine learning
+  - prescriptive maintenance
+  - cyclic systems
+  - learning entropy
+  - robotic monitoring
