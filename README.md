@@ -113,13 +113,7 @@ All software source code contained in this repository is distributed under the *
 
 The MIT License permits use, modification, redistribution, and commercial use of the software, provided that the original copyright notice and license text are retained.
 
-See:
-
-```text
-LICENSE
-```
-
-for the full license text.
+See [LICENSE](LICENSE) for the full license text.
 
 ### Documentation
 
