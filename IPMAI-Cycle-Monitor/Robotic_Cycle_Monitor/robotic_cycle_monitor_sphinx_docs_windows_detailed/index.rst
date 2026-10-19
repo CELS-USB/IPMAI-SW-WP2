@@ -6,7 +6,7 @@ Robotic Cycle Monitor Documentation
 **Affiliations:**
 
 | Department of Computer Science, Faculty of Science
-| CELS – Computational Engineering and Learning Systems
+| CELS
 | University of South Bohemia in České Budějovice
 
 .. toctree::
